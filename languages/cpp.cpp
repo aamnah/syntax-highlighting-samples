@@ -1,3 +1,10 @@
+// Comment
+
+/* 
+Multiline
+Comment
+*/
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -68,6 +75,9 @@ void UserQuery(map<string, vector<string> > &svmap)
 
 int main(int argc, char *argv[])
 {
+	// setup Neptune logging
+	NPT_LogManager::GetDefault().Configure("plist:.level=INFO;.handlers=ConsoleHandler;.ConsoleHandler.colors=off;.ConsoleHandler.filter=58");
+
 	ifstream readFile("TestFile_3.3.txt");
 	ofstream writeFile("TestFile_3.3.map");
 	if (!readFile.is_open() || !writeFile.is_open()) {
@@ -78,5 +88,6 @@ int main(int argc, char *argv[])
 	InitMap(mapFamily, readFile);
 	DisplayMap(mapFamily, writeFile);
 	UserQuery(mapFamily);
+	
 	return 0;
 }
