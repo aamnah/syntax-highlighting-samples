@@ -8,6 +8,7 @@ An h1 header
 ##### h5 Heading
 ###### h6 Heading
 
+###### **Nested** _styles_ in `headings` ~~yo~~
 
 Paragraphs are separated by a blank line.
 
